@@ -1,4 +1,4 @@
- //Playing around with Protocol
+ //Extending Float, Double, Int to confirm to protocol Number
 
 import UIKit
 
@@ -20,11 +20,6 @@ extension Double : Number{
     }
     
 }
-var three : Double = 3
-var four : Float = 4
-
-three.floatValue + four
-
 
 extension Int : Number{
     var floatValue : Float{
@@ -36,13 +31,13 @@ extension Int : Number{
 func +(valueA:Number, valueB:Number)-> Float{
    return valueA.floatValue + valueB.floatValue
 }
-func -(valueA:Number, valueB:Number){
+func -(valueA:Number, valueB:Number) -> Float{
     return valueA.floatValue - valueB.floatValue
 }
 func /(valueA:Number, valueB:Number)-> Float{
     return valueA.floatValue / valueB.floatValue
 }
-func *(valueA:Number, valueB:Number){
+func *(valueA:Number, valueB:Number) -> Float{
     return valueA.floatValue * valueB.floatValue
 }
 
